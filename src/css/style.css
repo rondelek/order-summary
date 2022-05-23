@@ -1,0 +1,109 @@
+@import url("https://fonts.google.com/specimen/Red+Hat+Display");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: bcontent-box; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0e8ff;
+  background-image: url("/src/images/pattern-background-desktop.svg"), url("/src/images/bg-pattern-bottom.svg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Red Hat Display', Lato;
+  letter-spacing: 0.2px; }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px; }
+  .card__img {
+    width: 100%; }
+    .card__img__content {
+      width: 100%;
+      border-radius: 10px 10px 0 0; }
+  .card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+    padding-top: 30px; }
+    .card__content__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 15px; }
+      .card__content__text h1 {
+        color: #1f2f56;
+        font-weight: 700; }
+      .card__content__text p {
+        color: #7280a7;
+        text-align: center;
+        padding: 10px 10px;
+        line-height: 22px; }
+    .card__content__price {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      background-color: #f5f7ff;
+      padding: 15px;
+      font-size: 0.9rem; }
+      .card__content__price__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 15px;
+        gap: 8px; }
+        .card__content__price__text__plan {
+          font-weight: 700; }
+        .card__content__price__text__price {
+          color: #7280a7; }
+      .card__content__price__button {
+        padding-left: 50px;
+        cursor: pointer; }
+        .card__content__price__button a:active {
+          color: #3829e0;
+          text-decoration: none;
+          opacity: .5; }
+    .card__content__buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 30px;
+      font-size: .8rem;
+      font-weight: 700; }
+      .card__content__buttons__proceed {
+        background-color: #3829e0;
+        border-radius: 10px;
+        padding: 10px 40px;
+        color: white;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        cursor: pointer; }
+        .card__content__buttons__proceed:active {
+          opacity: .5; }
+      .card__content__buttons__cancel {
+        color: #7280a7;
+        padding: 20px 0 30px 0;
+        cursor: pointer; }
+        .card__content__buttons__cancel:active {
+          color: #1f2f56; }

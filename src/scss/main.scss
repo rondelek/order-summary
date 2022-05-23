@@ -1,0 +1,133 @@
+@import './utils/variables';
+@import './utils/mixins';
+@import url('https://fonts.google.com/specimen/Red+Hat+Display');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: bcontent-box;
+}
+
+body {
+    @include setFlex(column);
+    background-color: $pale-blue;
+    background-image: url("/src/images/pattern-background-desktop.svg"), url("/src/images/bg-pattern-bottom.svg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Red Hat Display', Lato;
+    letter-spacing: 0.2px;
+}
+
+.card {
+    @include setFlex(column);
+    background-color: white;
+    border-radius: 10px;
+
+    &__img {
+        width: 100%;
+
+        &__content {
+            width: 100%;
+            border-radius: 10px 10px 0 0;  
+        }
+    }
+
+    &__content {
+        @include setFlex(column);
+        max-width: 350px;
+        padding-top: 30px;
+
+
+        &__text {
+            @include setFlex(column);
+            padding-bottom: 15px;
+
+            & h1 {
+                color: $dark-blue;
+                font-weight: 700;
+            }
+
+            & p {
+                color: $desaturated-blue;
+                text-align: center;
+                padding: 10px 10px;
+                line-height: 22px;
+            }
+            
+        }
+
+        &__price {
+            @include setFlex(row);
+            border-radius: 10px;
+            background-color: $very-pale-blue;
+            padding: 15px;
+            font-size: 0.9rem;
+            
+            &__text {
+                @include setFlex(column);
+                padding-left: 15px;
+                gap: 8px;
+
+                &__plan {
+                    font-weight: 700;
+                }
+
+                &__price {
+                    color: $desaturated-blue;
+                }
+            }
+
+            &__button {
+                padding-left: 50px;
+                cursor: pointer;
+
+                & a:active {
+                    color: $bright-blue;
+                    text-decoration: none;
+                    opacity: .5;
+                }
+            }
+        }
+
+        &__buttons {
+            @include setFlex(column);
+            padding-top: 30px;
+            font-size: .8rem;
+            font-weight: 700;
+
+
+            &__proceed {
+                background-color: $bright-blue;
+                border-radius: 10px;
+                padding: 10px 40px;
+                color: white;
+                font-weight: 700;
+                letter-spacing: 0.4px;
+                box-shadow: 0 5px 15px hsla(0,0%, 0%, .2);
+                cursor: pointer;
+
+                &:active {
+                    opacity: .5;
+                }
+            }
+
+            &__cancel {
+                color: $desaturated-blue;
+                padding: 20px 0 30px 0;
+                cursor: pointer;
+
+                &:active {
+                    color: $dark-blue;
+                }
+            }
+        }
+    }
+}
+
+
